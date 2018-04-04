@@ -11,7 +11,7 @@ class UsuarioController extends Controller
     //
     public function index(Request $request)
     {
-        $usuarios = usuario::paginate(5);
+        $usuarios = usuario::paginate(10);
         return view('adminmain',['usuarios'=>$usuarios]);
         //$usuarios = usuario::paginate(4);
         //return view('usuario/usuario')->withUsers($usuarios);

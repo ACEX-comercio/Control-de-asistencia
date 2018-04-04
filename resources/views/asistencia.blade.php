@@ -18,12 +18,20 @@
             <h2 class="text-center text-white pb-5"><span class="font-weight-light">Hola</span><strong> {{ Auth::user()->nombre }}</strong></h2>
             <div class="row">
                 <div class="col">
-                    <form class="d-flex justify-content-center align-items-center">
+                    <form class="d-flex justify-content-center align-items-center" action="{{ route('llegada.store') }}" method="POST">
+                    @csrf
+                        <div class="form-group d-none">
+                            <input name="idusu" type="text" class="form-control" id="exampleInputPassword1" value="{{ Auth::user()->id }}">
+                        </div>
                         <button type="submit" class="btn btn-primary btn-moca"><i class="material-icons">timer</i><p>LLEGADA</p></button>
                     </form>
                 </div>
                 <div class="col">
-                    <form class="d-flex justify-content-center align-items-center">
+                    <form class="d-flex justify-content-center align-items-center" action="{{ route('salida.store') }}" method="POST">
+                    @csrf
+                        <div class="form-group d-none">
+                            <input name="idusu" type="text" class="form-control" id="exampleInputPassword1" value="{{ Auth::user()->id }}">
+                        </div>
                         <button type="submit" class="btn bg-danger btn-moca"><i class="material-icons">timer_off</i><p>SALIDA</p></button>
                     </form>
                 </div>

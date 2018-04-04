@@ -57,28 +57,28 @@
        </div>
     </section>
     <section class="container pt-5">
-        <h4 class="pb-2">Lista de trabajadores</h4>
+        <h4 class="pb-2">Lista de salida</h4>
         <table class="table">
             <thead class="thead-light">
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Nombre</th>
                     <th scope="col">Apellidos</th>
-                    <th scope="col">Correo</th>
-                    <th scope="col">DNI</th>
-                    <th scope="col">Rol</th>
+                    <th scope="col">Cargo</th>
+                    <th scope="col">Hora</th>
+                    <th scope="col">Fecha</th>
                     <th scope="col">Accion</th>
                 </tr>
             </thead>
             <tbody>
-                  @foreach ($usuarios as $usuario)
+                  @foreach ($salidas as $salida)
                             <tr>
-                                <th scope="row">{{ $usuario->id }}</th>
-                                <td>{{ $usuario->nombre }}</td>
-                                <td>{{ $usuario->apellido }}</td>
-                                <td>{{ $usuario->email }}</td>
-                                <td>{{ $usuario->username }}</td>
-                                <td>{{ $usuario->tipo_usuario }}</td>
+                                <th scope="row">{{ $salida->id }}</th>
+                                <td>{{ $salida->nombre }}</td>
+                                <td>{{ $salida->apellido }}</td>
+                                <td>{{ $salida->tipo_usuario }}</td>
+                                <td>{{ $salida->hora }}</td>
+                                <td>{{ $salida->fecha }}</td>
                                 <td>
                                   
                                 </td>
@@ -86,7 +86,6 @@
                     @endforeach
             </tbody>
         </table>
-        {{$usuarios->render("pagination::bootstrap-4")}}
     </section>
 
     <!-- Modal -->
@@ -136,7 +135,6 @@
             </div>
         </div>
     </div>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

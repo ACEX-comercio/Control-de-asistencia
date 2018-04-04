@@ -23,6 +23,9 @@ Route::group(['middleware' => 'rolesusuario'], function () {
         return view('asistencia');
     });
 });
+Route::resource('/llegada', 'EntradaController');
+
+Route::resource('/salida', 'SalidaController');
 Route::resource('/admin', 'UsuarioController');
 //Route::resource('/admin', 'UsuarioController');
 
