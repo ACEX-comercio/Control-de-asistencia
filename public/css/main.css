@@ -1,0 +1,47 @@
+.seccion{
+    height: 100vh;
+}
+.btn-moca{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    color: #fff;
+}
+.btn-col{
+    background-color: #015A7F !important;
+    border: solid #015A7F;
+}
+.btn-moca i{
+    font-size: 50px;
+}
+.formulario img{
+    width: 250px;
+    text-align: center;
+}
+.formulario{
+    padding: 30px;
+    width: 60%;
+}
+.seccion{
+    background-color: #015A7F !important;
+}
+@media (max-width: 576px) { 
+
+}
+@media (max-width: 768px) { 
+    
+    .formulario img{
+        width: 150px;
+    }
+    .formulario{
+        width: 100%;
+    }
+    .seccion{
+        background-color: #015A7F !important;
+    }
+}
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
