@@ -15,15 +15,16 @@
     
     <section class="container-fluid d-flex justify-content-center align-items-center bg-white seccion">
         <div class="container d-flex justify-content-center align-items-center">
-            <form class="formulario  bg-light text-center">
+            <form class="formulario  bg-light text-center" method="POST" action="{{ route('login') }}">
+            @csrf
                 <img src="{{ asset('images/axcex1.png') }}" alt="logo acex">
                 <div class="form-group text-left">
                     <label for="exampleInputEmail1">Correo</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="tunombre@acex.com">
+                    <input name="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="tunombre@acex.com">
                 </div>
                 <div class="form-group text-left">
                     <label for="exampleInputPassword1">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="******">
+                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="******">
                 </div>
                 <button type="submit" class="btn btn-primary btn-lg btn-block btn-col">Ingresar</button>
             </form>

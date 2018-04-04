@@ -15,6 +15,7 @@
     
     <section class="container-fluid d-flex justify-content-center align-items-center bg-light seccion">
         <div>
+            <h2 class="text-center text-white pb-5"><span class="font-weight-light">Hola</span><strong> {{ Auth::user()->nombre }}</strong></h2>
             <div class="row">
                 <div class="col">
                     <form class="d-flex justify-content-center align-items-center">

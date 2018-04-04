@@ -12,12 +12,21 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/asistencia', function () {
-    return view('asistencia');
-});
-Route::get('/loginmain', function () {
     return view('loginmain');
 });
 
+Route::get('/loginmain', function () {
+    return view('loginmain');
+});
+Route::group(['middleware' => 'rolesusuario'], function () {
+    Route::get('/asistencia', function () {
+        return view('asistencia');
+    });
+});
+Route::resource('/admin', 'UsuarioController');
+//Route::resource('/admin', 'UsuarioController');
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
